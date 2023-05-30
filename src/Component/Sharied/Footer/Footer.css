@@ -1,0 +1,14 @@
+.socialIcon p {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3f4040;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 9px;
+    font-size: 18px;
+    color: white;
+}
+.footer a , p{
+    color: white;
+}

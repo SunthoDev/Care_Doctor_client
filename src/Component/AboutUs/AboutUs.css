@@ -1,0 +1,23 @@
+.overlay img{
+    border: 8px solid white;
+    border-radius: 7px;
+}
+.overlay {
+    margin-top: -165px;
+}
+.right h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color-scheme: black;
+    width: 48%;
+}
+.right h4 {
+    font-weight: 600;
+    font-size: 19px;
+    padding-bottom: 8px;
+}
+.right p {
+    color: black;
+    font-size: 14px;
+    font-family: auto;
+}

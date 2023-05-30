@@ -1,0 +1,19 @@
+.infoOne {
+    color: white;
+    top: 45%;
+    transform: translate(79%);
+    font-size: 38px;
+    font-weight: 600;
+    font-family: emoji;
+}
+.infoTow {
+    color: white;
+    background: red;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    padding: 8px 0;
+    font-size: 15px;
+    font-family: cursive;
+    border-radius: 3px;
+}
