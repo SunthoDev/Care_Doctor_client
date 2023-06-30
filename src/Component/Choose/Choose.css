@@ -1,0 +1,42 @@
+.title h5 {
+    color: #ff3811;
+    font-weight: 600;
+    font-size: 17px;
+}
+.title h3 {
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 4px 0;
+}
+.title p {
+    color: black;
+    font-family: 'FontAwesome';
+    font-weight: 500;
+}
+.title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+.parent .choose {
+    border: 2px solid #F1F1F1;
+    padding: 25px 38px;
+    border-radius: 8px;
+}
+.parent .choose .img {
+    width: 100%;
+}
+.parent .choose .img img{
+    margin: 0 auto;
+}
+.parent .choose h2{
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
+}
+

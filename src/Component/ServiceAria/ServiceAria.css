@@ -16,14 +16,12 @@
 }
 .title {
     text-align: center;
-    width: 54%;
     margin: 0 auto;
 }
 .cardLength {
     color: red;
     font-weight: 600;
     border: 1px solid #00c70f;
-    width: 17%;
     padding: 10px 0;
     border-radius: 7px;
     text-align: center;

@@ -26,7 +26,7 @@ const CheckOut = () => {
             service:_id,
             price:price
         }
-        fetch("https://care-doctor-server.vercel.app/booking",{
+        fetch("http://localhost:5000/booking",{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(order)

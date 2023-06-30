@@ -23,23 +23,26 @@ const Login = () => {
     let[error,setError]=useState("")
 
 
-    // from value email login part  and  server send user email or received token save localStorage
+    // from value email login part  
 
     let handleInputData=(event)=>{
         event.preventDefault()
         let emailValue=event.target.email.value
         let passwordValue=event.target.password.value
+        setSuccess("")
+        setError("")
 
         // email pass login state 
         loginUser(emailValue,passwordValue)
+
         .then(result=>{
             let user=result.user 
             console.log(user)
-
             setSuccess("Your Login Successfully")
             event.target.reset()
             navigate(from)
         })
+
         .then(error=>{
             // console.log(error.message)
             setError(error.message)
@@ -65,11 +68,6 @@ const Login = () => {
             console.log(googleError)
         }) 
     }
-
-
-
-
-
 
 
 

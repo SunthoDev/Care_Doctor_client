@@ -20,16 +20,8 @@ const Header = () => {
     const navItem = <>
         <li><ActiveRoute to="/">Home</ActiveRoute></li>
         <li><ActiveRoute to="/">About</ActiveRoute></li>
-        <li><ActiveRoute to="/">Services</ActiveRoute></li>
-        <li><ActiveRoute to="/">Blog</ActiveRoute></li>
-        <li><ActiveRoute to="/">Contact</ActiveRoute></li>
-        {
-            user?.email? <>
-            <li><ActiveRoute to="/booking">My Booking</ActiveRoute></li>
-                <li><button onClick={handleLogOut}>LogOut</button></li>
-            </>  :
-            <li><ActiveRoute to="/login">Login</ActiveRoute></li>
-        }
+        <li><ActiveRoute to="/booking">My Booking</ActiveRoute></li>
+        
     </>
 
     return (
@@ -63,7 +55,13 @@ const Header = () => {
                             <span className="badge badge-xs badge-primary indicator-item"></span>
                         </div>
                     </button>
-                    <Link className="btn btn-outline btn-secondary">Appointment</Link>
+                    {
+                        user ?
+                        <Link to="/login" onClick={handleLogOut} className="btn btn-outline btn-secondary">LogOut</Link>
+                        :
+                        <Link to="/login" className="btn btn-outline btn-secondary">SingUp</Link>
+
+                    }
                 </div>
             </div>
         </div>

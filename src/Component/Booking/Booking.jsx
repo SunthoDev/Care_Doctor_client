@@ -10,21 +10,21 @@ const Booking = () => {
 
     let { user } = useContext(AuthContext)
     let [booking, setBooking] = useState([])
-    let navigate=useNavigate()
+    let navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`https://care-doctor-server.vercel.app/booking?email=${user?.email}`,{
-            method:"GET",
-            headers:{
-                authorization:`Bearer ${localStorage.getItem("care_doctor")}`
+        fetch(`http://localhost:5000/booking?email=${user?.email}`, {
+            method: "GET",
+            headers: {
+                authorization: `Bearer ${localStorage.getItem("care_doctor")}`
             }
         })
             .then(res => res.json())
             .then(data => {
-                if(!data.error){
+                if (!data.error) {
                     setBooking(data)
                 }
-                else{
+                else {
                     navigate("/")
                 }
             })
@@ -33,13 +33,10 @@ const Booking = () => {
 
 
 
-
-
-
     let handleDelete = (id) => {
         let proceed = confirm("Are You Sure Delete")
         if (proceed) {
-            fetch(`https://care-doctor-server.vercel.app/delete/${id}`, {
+            fetch(`http://localhost:5000/delete/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -48,7 +45,7 @@ const Booking = () => {
                         alert("Your Item Delete Is successfully")
                     }
                     {
-                        let remaining=booking.filter(de=> de._id !== id)
+                        let remaining = booking.filter(de => de._id !== id)
                         setBooking(remaining)
                     }
                 })
@@ -56,28 +53,28 @@ const Booking = () => {
     }
 
 
-    let handleConfirm=(id)=>{
+    let handleConfirm = (id) => {
 
-        fetch(`https://care-doctor-server.vercel.app/update/${id}`,{
-            method:"PATCH",
-            headers:{
-                "content-type":"application/json"
+        fetch(`http://localhost:5000/update/${id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json"
             },
-            body:JSON.stringify({status:"Confirm"})
+            body: JSON.stringify({ status: "Confirm" })
         })
-        .then(res=> res.json())
-        .then(data=> {
-            console.log(data)
-            if (data.modifiedCount> 0) {
-                alert("Your Data Modified Is Successfully")
-            }
-            let remaining=booking.filter(book=> book._id !== id)
-            let updateData=booking.find(up=> up._id === id)
-            updateData.status="Confirm"
-            let newBooking=[updateData , ...remaining]
-            setBooking(newBooking)
-            
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    alert("Your Data Modified Is Successfully")
+                }
+                let remaining = booking.filter(book => book._id !== id)
+                let updateData = booking.find(up => up._id === id)
+                updateData.status = "Confirm"
+                let newBooking = [updateData, ...remaining]
+                setBooking(newBooking)
+
+            })
     }
 
 

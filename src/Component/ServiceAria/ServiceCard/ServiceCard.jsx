@@ -5,11 +5,11 @@ const ServiceCard = ({ servicesDat }) => {
     let { img, title, service_id, _id, price } = servicesDat
     // console.log(servicesDat)
     return (
-        <div className="CardParent mt-3">
+        <div className="CardParent">
 
-            <div className="card w-80 bg-base-100 shadow-xl">
+            <div className="card w-full bg-base-100 shadow-xl">
 
-                <figure className='px-5 h-[250px] pt-8 '><img className='rounded-lg' src={img} alt="Shoes" /></figure>
+                <figure className=' h-[250px] '><img className='rounded-lg' src={img} alt="Shoes" /></figure>
 
                 <div className="card-body relative bottom-0 flex py-5 justify-between">
 

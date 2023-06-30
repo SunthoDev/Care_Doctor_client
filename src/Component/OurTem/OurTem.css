@@ -1,0 +1,41 @@
+.title h5 {
+    color: #ff3811;
+    font-weight: 600;
+    font-size: 17px;
+}
+.title h3 {
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 4px 0;
+}
+.title p {
+    color: black;
+    font-family: 'FontAwesome';
+    font-weight: 500;
+}
+.title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+.cardMain {
+    border: 2px solid #F3F3F3;
+    border-radius: 8px;
+}
+
+.Icon i {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 23px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 5px;
+    margin-top: 4px;
+}

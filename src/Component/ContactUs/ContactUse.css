@@ -1,0 +1,13 @@
+.Contacts h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+.Contacts h3 {
+    color: white;
+    font-size: 29px;
+    font-weight: 500;
+}
+.ParentContact{
+    border-radius: 7px;
+}
