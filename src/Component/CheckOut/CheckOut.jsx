@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import CheckOutBanner from '../CommonWork/CheckOutBanner/CheckOutBanner';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authencation/AuthProvider/AuthProvider';
 
 const CheckOut = () => {
     let {user}=useContext(AuthContext)
     let services = useLoaderData()
     let {title,_id,price,img}=services
-    console.log(services)
-
+    let navigate=useNavigate()
+        // TODO
     let handelAddSubmit=(event)=>{
         event.preventDefault()
         let name=event.target.name.value
@@ -19,14 +19,13 @@ const CheckOut = () => {
             customerName:name,
             email,
             date,
-            img,
             title,
             img,
             number,
             service:_id,
             price:price
         }
-        fetch("http://localhost:5000/booking",{
+        fetch("https://care-doctor-server.vercel.app/booking",{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(order)
@@ -36,7 +35,7 @@ const CheckOut = () => {
             if(data.insertedId){
                 alert("Your Booking Complete")
             }
-            console.log(data)
+            navigate("/booking")
         })
     }
 

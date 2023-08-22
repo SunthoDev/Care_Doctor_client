@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import "./Singup.css"
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from "../../../assets/images/login/login.svg"
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import title from '../../../hook/useTitle';
@@ -9,6 +9,10 @@ const SingUp = () => {
 
 
     title("Register")
+
+    let location=useLocation()
+    let navigate=useNavigate()
+    let from=location.state?.from?.pathname || "/"
 
     let {createUser}=useContext(AuthContext)
 
@@ -28,13 +32,13 @@ const SingUp = () => {
             setError("Please Meatch Your Password")
             return
         }
-        console.log(nameValue, emailValue,photoValue,passwordValue,confirmPass)
+        // console.log(nameValue, emailValue,photoValue,passwordValue,confirmPass)
         createUser(emailValue,passwordValue)
         .then(result=>{
             let user=result.user
-            console.log(user)
             setSuccess(" Your SingUp Successfully ")
             event.target.reset()
+            navigate(from)
         })
         .catch(error=>{
             console.log(error)

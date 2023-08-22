@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
             if (currentUser && currentUser.email) {
                 let userEmail = { email: currentUser.email }
 
-                fetch("http://localhost:5000/jwt", {
+                fetch("https://care-doctor-server.vercel.app/jwt", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -47,7 +47,6 @@ const AuthProvider = ({ children }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
                         localStorage.setItem("care_doctor", data.token)
                     })
             }

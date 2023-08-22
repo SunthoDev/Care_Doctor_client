@@ -13,7 +13,7 @@ const Booking = () => {
     let navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking?email=${user?.email}`, {
+        fetch(`https://care-doctor-server.vercel.app/booking?email=${user?.email}`, {
             method: "GET",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("care_doctor")}`
@@ -36,7 +36,7 @@ const Booking = () => {
     let handleDelete = (id) => {
         let proceed = confirm("Are You Sure Delete")
         if (proceed) {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://care-doctor-server.vercel.app/delete/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -55,7 +55,7 @@ const Booking = () => {
 
     let handleConfirm = (id) => {
 
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://care-doctor-server.vercel.app/update/${id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

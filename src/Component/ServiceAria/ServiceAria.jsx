@@ -6,11 +6,10 @@ const ServiceAria = () => {
     let [service, setService] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://care-doctor-server.vercel.app/services")
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
-
 
 
     return (

@@ -34,6 +34,9 @@ const AboutUs = () => {
             </div>
 
 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptate molestiae harum saepe rem accusamus quia eum velit, modi voluptatibus, temporibus corrupti libero dicta minima natus sint impedit esse repudiandae itaque! A totam rerum praesentium recusandae. Rem perspiciatis laudantium mollitia beatae voluptatum illum accusantium consectetur quod asperiores soluta, accusamus iusto molestiae sapiente quidem eum praesentium, assumenda molestias sequi. Quam, qui? Voluptatem incidunt possimus tempora nam dolore asperiores, exercitationem suscipit laborum cumque error aliquid, quaerat, pariatur repudiandae obcaecati magnam excepturi quis alias. Quae recusandae eos numquam quos laborum quas? Adipisci omnis porro quibusdam blanditiis iure nostrum eaque quod ipsa exercitationem deserunt.</p>
+
+
         </div>
     );
 };
