@@ -7,9 +7,9 @@ import Main from './Component/Main/Main.jsx'
 import SingUp from './Component/Authencation/SingUp/SingUp.jsx'
 import Login from './Component/Authencation/Login/Login.jsx'
 import AuthProvider from './Component/Authencation/AuthProvider/AuthProvider.jsx'
-// import CheckOut from './Component/CheckOut/CheckOut.jsx'
-// import Booking from './Component/Booking/Booking.jsx'
-// import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx'
+import CheckOut from './Component/CheckOut/CheckOut.jsx'
+import Booking from './Component/Booking/Booking.jsx'
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx'
 import About from './Component/CommonWork/About/About.jsx'
 
 
